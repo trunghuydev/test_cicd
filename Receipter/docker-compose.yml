@@ -1,0 +1,9 @@
+services:
+  cicd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3333:5173"
+  
