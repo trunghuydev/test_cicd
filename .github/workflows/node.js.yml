@@ -29,5 +29,5 @@ jobs:
       - run: npm ci
         working-directory: ./Receipter
       - run: npm run build --if-present
-        # working-directory: ./Receipter
+        working-directory: ./Receipter
     ## run: npm test
