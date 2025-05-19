@@ -6,11 +6,11 @@ export interface Login {
 
 export interface LoginResponseTokenData {
 
-  refreshToken: string;
-  accessToken: string;
-  expiresIn: number;
-  tokenType: string;
-  createdAt: string; 
+  refreshToken: string | null;
+  accessToken: string| null;
+  expiresIn?: number;
+  tokenType?: string;
+  createdAt?: string; 
 }
 
 
