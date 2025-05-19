@@ -1,0 +1,25 @@
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '@/Store/auth';
+import Loading from '@/Components/Loading';
+
+const Logout: React.FC = () => {
+  const setToken = useAuthStore((state) => state.setToken);
+  const navigate = useNavigate();
+  const [loading] = useState(true);
+
+  useEffect(() => {
+    setToken(null);
+    localStorage.removeItem('isAuthenticated');
+
+    const timer = setTimeout(() => {
+      navigate('/');
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, [setToken, navigate]);
+
+  return <>{loading && <Loading />}</>;
+};
+
+export default Logout;
