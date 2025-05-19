@@ -1,25 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '@/Store/auth';
-import Loading from '@/Components/Loading';
+// import { useEffect, useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { useAuthStore } from '@/Store/auth';
+// import Loading from '@/Components/Loading';
 
-const Logout: React.FC = () => {
-  const setToken = useAuthStore((state) => state.setToken);
-  const navigate = useNavigate();
-  const [loading] = useState(true);
+// const Logout: React.FC = () => {
+//   const setToken = useAuthStore((state) => state.setTokens);
+//   const navigate = useNavigate();
+//   const [loading] = useState(true);
 
-  useEffect(() => {
-    setToken(null);
-    localStorage.removeItem('isAuthenticated');
+//   useEffect(() => {
+//     setToken(token? ,refreshToken?);
+//     localStorage.removeItem('isAuthenticated');
 
-    const timer = setTimeout(() => {
-      navigate('/');
-    }, 800);
+//     const timer = setTimeout(() => {
+//       navigate('/');
+//     }, 800);
 
-    return () => clearTimeout(timer);
-  }, [setToken, navigate]);
+//     return () => clearTimeout(timer);
+//   }, [setToken, navigate]);
 
-  return <>{loading && <Loading />}</>;
-};
+//   return <>{loading && <Loading />}</>;
+// };
 
-export default Logout;
+// export default Logout;

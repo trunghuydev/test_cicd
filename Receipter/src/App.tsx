@@ -2,7 +2,7 @@ import ConfigProvider from 'antd/es/config-provider';
 import localeVN from 'antd/locale/vi_VN';
 
 import 'antd/dist/reset.css';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '@/Components/Loading';

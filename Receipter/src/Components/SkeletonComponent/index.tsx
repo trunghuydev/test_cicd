@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 
 const SkeletonComponent = () => (
   <div className="flex flex-col items-center justify-center space-y-4">
